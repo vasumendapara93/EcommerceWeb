@@ -1,8 +1,8 @@
-﻿using EcommerceWeb.Data;
-using EcommerceWeb.Models;
+﻿using Ecommerce.DataAccess;
+using Ecommerce.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EcommerceWeb.Controllers
+namespace Ecommerce.Controllers
 {
     public class CategoryController : Controller
     {
@@ -13,7 +13,7 @@ namespace EcommerceWeb.Controllers
         }
         public IActionResult Index()
         {
-            List<Category> objCategoryList = _db.categories.ToList();
+            List<Category> objCategoryList = _db.Categories.ToList();
             return View(objCategoryList);
         }
 
@@ -30,7 +30,7 @@ namespace EcommerceWeb.Controllers
             }
             if (ModelState.IsValid)
             {
-                _db.categories.Add(obj);
+                _db.Categories.Add(obj);
                 _db.SaveChanges();
                 TempData["success"] = "Category created successfully.";
                 return RedirectToAction("Index");
@@ -44,7 +44,7 @@ namespace EcommerceWeb.Controllers
             {
                 return NotFound();
             }
-            Category? categoryFromDb = _db.categories.Find(id);
+            Category? categoryFromDb = _db.Categories.Find(id);
             if(categoryFromDb == null)
             {
                 return NotFound();
@@ -56,7 +56,7 @@ namespace EcommerceWeb.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.categories.Update(obj);
+                _db.Categories.Update(obj);
                 _db.SaveChanges();
                 TempData["success"] = "Category updated successfully.";
                 return RedirectToAction("Index");
@@ -70,7 +70,7 @@ namespace EcommerceWeb.Controllers
             {
                 return NotFound();
             }
-            Category? categoryFromDb = _db.categories.Find(id);
+            Category? categoryFromDb = _db.Categories.Find(id);
             if (categoryFromDb == null)
             {
                 return NotFound();
@@ -80,12 +80,12 @@ namespace EcommerceWeb.Controllers
         [HttpPost,ActionName("Delete")]
         public IActionResult DeletePOST(int? id)
         {
-            Category? obj = _db.categories.Find(id);
+            Category? obj = _db.Categories.Find(id);
             if (obj == null)
             {
                 return NotFound();
             }
-            _db.categories.Remove(obj);
+            _db.Categories.Remove(obj);
             _db.SaveChanges();
             TempData["success"] = "Category deleted successfully.";
             return RedirectToAction("Index");

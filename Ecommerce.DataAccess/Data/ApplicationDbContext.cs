@@ -1,7 +1,7 @@
-﻿using EcommerceWeb.Models;
+﻿using Ecommerce.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace EcommerceWeb.Data
+namespace Ecommerce.DataAccess
 {
     public class ApplicationDbContext : DbContext
     {
@@ -10,7 +10,7 @@ namespace EcommerceWeb.Data
 
         }
 
-        public DbSet<Category> categories { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
