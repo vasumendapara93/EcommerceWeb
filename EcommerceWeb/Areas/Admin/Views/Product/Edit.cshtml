@@ -2,7 +2,7 @@
 
 <form method="post">
     <input asp-for="Id" hidden />
-    <div class="border p-4 mt-4">
+    <div class="border p-4 my-4">
         <div class="row pb-2">
             <h2 class="text—primary">Update Product</h2>
             <hr />
@@ -15,7 +15,7 @@
         </div>
         <div class="mb-3 row">
             <label asp-for="Description" class="p-0"></label>
-            <input asp-for="Description" class="form-control" />
+            <textarea asp-for="Description" class="form-control" ></textarea>
             <span asp-validation-for="Description" class="text-danger"></span>
         </div>
         <div class="mb-3 row">
