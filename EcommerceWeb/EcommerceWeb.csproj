@@ -40,6 +40,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<Folder Include="Areas\Identity\Data\" />
 		<Folder Include="wwwroot\images\product\" />
 	</ItemGroup>
 
