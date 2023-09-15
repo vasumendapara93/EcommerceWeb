@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BulkyBook.Models
+namespace Ecommerce.Models
 {
     public class ApplicationUser : IdentityUser
     {
