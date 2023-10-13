@@ -7,9 +7,13 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<Compile Remove="Areas\Identity\Data\**" />
 		<Compile Remove="Controllers\**" />
+		<Content Remove="Areas\Identity\Data\**" />
 		<Content Remove="Controllers\**" />
+		<EmbeddedResource Remove="Areas\Identity\Data\**" />
 		<EmbeddedResource Remove="Controllers\**" />
+		<None Remove="Areas\Identity\Data\**" />
 		<None Remove="Controllers\**" />
 	</ItemGroup>
 
@@ -41,7 +45,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Folder Include="Areas\Identity\Data\" />
 		<Folder Include="wwwroot\images\product\" />
 	</ItemGroup>
 
