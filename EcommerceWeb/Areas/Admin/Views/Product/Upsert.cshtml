@@ -1,6 +1,6 @@
 ﻿@model ProductVM
 <div class="card shadow border-0 my-4">
-    <div class="card-header bg-secondary bg-gradient ml-0 py-3">
+    <div class="card-header bg-info bg-gradient ml-0 py-3">
         <div class="row">
             <div class="col-12 text-center">
                 <h2 class="text-white py-2"> @(Model.Product.Id != 0 ? "Update" : "Create") Product</h2>
@@ -74,15 +74,15 @@
                             <div class="col-6 col-md-3">
                                 @if (Model.Product.Id != 0)
                                 {
-                                    <button type="submit" class="btn btn-primary form-control">Update</button>
+                                    <button type="submit" class="btn btn-info form-control">Update</button>
                                 }
                                 else
                                 {
-                                    <button type="submit" class="btn btn-primary form-control">Create</button>
+                                    <button type="submit" class="btn btn-info form-control">Create</button>
                                 }
                             </div>
                             <div class="col-6 col-md-3">
-                                <a asp-controller="Product" asp-action="Index" class="btn btn-outline-primary border  form-control">
+                                <a asp-controller="Product" asp-action="Index" class="btn btn-outline-info border  form-control">
                                     Back to List
                                 </a>
                             </div>

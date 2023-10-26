@@ -4,10 +4,10 @@
     <br />
     <div class="container">
         <div class="card">
-            <div class="card-header bg-dark text-light ml-0">
+            <div class="card-header bg-info text-light ml-0">
                 <div class="container row">
                     <div class="col-12 d-none d-md-block col-md-6 pb-1">
-                        <i class="fas fa-shopping-cart"></i> &nbsp; Order Summary
+                        <i class="fas fa-shopping-cart"></i> Order Summary
                     </div>
                     <div class="col-12 col-md-4 offset-md-2 text-right">
                         <a asp-action="Index" class="btn btn-outline-info form-control btn-sm">Back to Orders</a>
@@ -201,7 +201,7 @@
                             <h4 class="d-flex justify-content-between align-items-center mb-3">
                                 <span class="text-primary">Order Summary</span>
                             </h4>
-                            <label class="btn btn-outline-primary form-control my-2">Order Status - @Model.OrderHeader.OrderStatus</label>
+                            <label class="btn btn-outline-info form-control my-2">Order Status - @Model.OrderHeader.OrderStatus</label>
 
                             <ul class="list-group mb-3">
                                 @foreach (var detail in Model.OrderDetail)
@@ -220,7 +220,7 @@
                                         </div>
                                     </li>
                                 }
-                                <li class="list-group-item bg-primary">
+                                <li class="list-group-item bg-info">
                                     <div class="row container">
                                         <div class="col-6">
                                             <h5 class="text-white">TOTAL </h5>
